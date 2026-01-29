@@ -1,3 +1,4 @@
+//This is a C++ style Header file
 #pragma once
 #include"data_generator.h"
 #include"board.h"
@@ -86,4 +87,5 @@ bool to_generate_data_Game::get_board(int row_index,int line_index,int i){
 }
 void to_generate_data_Game::displayer(){
     this->board.display();
+
 }
