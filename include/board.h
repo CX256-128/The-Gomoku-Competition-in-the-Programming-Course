@@ -1,4 +1,4 @@
-//This is a C++ style Header file
+// This is a C++ style Header File
 #pragma once
 #include<iostream>
 #include"function.h"
@@ -20,7 +20,7 @@ struct Board{
     void initiate();
     Board(){ this->initiate(); }
 };
-void Board::display(){
+inline void Board::display(){
     for(int i=0;i<28;i++){
         for(int j=0;j<28;j++){
             if(i==0||i==27){
@@ -41,11 +41,10 @@ void Board::display(){
         std::cout<<std::endl;
     }
 }
-void Board::initiate(){
+inline void Board::initiate(){
     for(int i=0;i<26;i++){
         for(int j=0;j<26;j++){
             this->table[i][j]=0;
         }
     }
-
 }

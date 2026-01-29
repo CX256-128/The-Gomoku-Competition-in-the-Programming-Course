@@ -1,4 +1,4 @@
-//This is a C++ style Header file
+// This is a C++ style Header File
 #pragma once
 #include<iostream>
 #include<string>
@@ -16,7 +16,7 @@ namespace interupt{
     };
 }
 
-char trans(int input){
+inline char trans(int input){
     switch (input)
     {
     case 0:
@@ -30,10 +30,9 @@ char trans(int input){
         return ' ';
     }
 }
-std::string dis_trans(int in){
+inline std::string dis_trans(int in){
     if(in<10)
         return "0"+std::to_string(in);
     else
         return std::to_string(in);
-
 }

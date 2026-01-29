@@ -1,4 +1,4 @@
-//This is a C++ style Header file
+// This is a C++ style Header File
 #pragma once
 #include<iostream>
 #include<fstream>
@@ -21,7 +21,7 @@ class Generator{
         int num;
 };
 
-void Generator::read_file_maximum(){
+inline void Generator::read_file_maximum(){
     std::ifstream ifso;
     ifso.open("count.num",std::ios::in);
     if(!ifso.is_open()){
@@ -37,7 +37,7 @@ void Generator::read_file_maximum(){
     ifso.close();
 }
 
-void Generator::write_new_file(){
+inline void Generator::write_new_file(){
     std::string file_name = std::to_string(this->file_maximum) + ".ai";
     std::ofstream ofso;
     ofso.open(file_name,std::ios::out);
@@ -50,12 +50,11 @@ void Generator::write_new_file(){
     ofso<<this->file_maximum+1;
     ofso.close();
 }
-void Generator::push_history(int row_index,int line_index){
+inline void Generator::push_history(int row_index,int line_index){
     this->history[this->num][0]=line_index;
     this->history[this->num][1]=row_index;
     this->num++;
 }
-void Generator::initiate(){
+inline void Generator::initiate(){
     this->num=0;
-
 }

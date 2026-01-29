@@ -1,4 +1,4 @@
-//This is a C++ style Header file
+// This is a C++ style Header File
 #pragma once
 #include"data_generator.h"
 #include"board.h"
@@ -29,7 +29,7 @@ class to_generate_data_Game{
         Board board;
 };
 
-void to_generate_data_Game::initiate(){
+inline void to_generate_data_Game::initiate(){
     this->board.initiate();
     this->player1.set_player_type(1);
     this->player2.set_player_type(2);
@@ -38,7 +38,7 @@ void to_generate_data_Game::initiate(){
         this->generator.read_file_maximum();
     }
 }
-void to_generate_data_Game::player_input(int i){
+inline void to_generate_data_Game::player_input(int i){
     redo:
     std::cout<<"now it's player"<<i<<"'s turn (whose chess mark is "<<trans(i)<<std::endl;
     std::cout<<"input_example: (a , 01) we input as a01"<<std::endl;
@@ -68,12 +68,12 @@ void to_generate_data_Game::player_input(int i){
         goto redo;
     }
 }
-void to_generate_data_Game::set_board(int row_index,int line_index,int i){
+inline void to_generate_data_Game::set_board(int row_index,int line_index,int i){
     this->board.table[line_index][row_index] = i;
     if(this->is_to_store)
         this->generator.push_history(row_index,line_index);
 }
-bool to_generate_data_Game::get_board(int row_index,int line_index,int i){
+inline bool to_generate_data_Game::get_board(int row_index,int line_index,int i){
     switch (this->board.table[line_index][row_index])
     {
     case 0:
@@ -85,7 +85,6 @@ bool to_generate_data_Game::get_board(int row_index,int line_index,int i){
         break;
     }
 }
-void to_generate_data_Game::displayer(){
+inline void to_generate_data_Game::displayer(){
     this->board.display();
-
 }
