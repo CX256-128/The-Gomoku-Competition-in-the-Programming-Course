@@ -1,3 +1,4 @@
+//This is a C++ style Header file
 #pragma once
 #include<iostream>
 #include<fstream>
@@ -56,4 +57,5 @@ void Generator::push_history(int row_index,int line_index){
 }
 void Generator::initiate(){
     this->num=0;
+
 }
