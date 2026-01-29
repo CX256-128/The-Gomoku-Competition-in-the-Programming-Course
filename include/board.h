@@ -1,3 +1,4 @@
+//This is a C++ style Header file
 #pragma once
 #include<iostream>
 #include"function.h"
@@ -46,4 +47,5 @@ void Board::initiate(){
             this->table[i][j]=0;
         }
     }
+
 }
