@@ -166,7 +166,7 @@ inline int basic_game::check_winner(){
             // horizontal
             if(j + 4 < BOARD_SIZE){
                 bool ok = true;
-                for(int k = 1; k < 5; k++){
+                for(int k = 4; k >= 0; k--){
                     if(this->board.table[i][j + k] != current){
                         ok = false;
                         break;
@@ -179,7 +179,7 @@ inline int basic_game::check_winner(){
             // vertical
             if(i + 4 < BOARD_SIZE){
                 bool ok = true;
-                for(int k = 1; k < 5; k++){
+                for(int k = 4; k >= 0; k--){
                     if(this->board.table[i + k][j] != current){
                         ok = false;
                         break;
@@ -192,7 +192,7 @@ inline int basic_game::check_winner(){
             // diagonal down-right
             if(i + 4 < BOARD_SIZE && j + 4 < BOARD_SIZE){
                 bool ok = true;
-                for(int k = 1; k < 5; k++){
+                for(int k = 4; k >= 0; k--){
                     if(this->board.table[i + k][j + k] != current){
                         ok = false;
                         break;
@@ -205,7 +205,7 @@ inline int basic_game::check_winner(){
             // diagonal up-right
             if(i - 4 >= 0 && j + 4 < BOARD_SIZE){
                 bool ok = true;
-                for(int k = 1; k < 5; k++){
+                for(int k = 4; k >= 0; k--){
                     if(this->board.table[i - k][j + k] != current){
                         ok = false;
                         break;
